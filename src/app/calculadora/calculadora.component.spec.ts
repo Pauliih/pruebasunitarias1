@@ -5,6 +5,7 @@ import { CalculadoraComponent } from "./calculadora.component";
 describe("CalculadoraComponent", () => {
   let component: CalculadoraComponent;
   let fixture: ComponentFixture<CalculadoraComponent>;
+  let calculator;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -13,6 +14,9 @@ describe("CalculadoraComponent", () => {
   }));
 
   beforeEach(() => {
+    //Arrage - Preparar
+    calculator = new CalculadoraComponent();
+
     fixture = TestBed.createComponent(CalculadoraComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -24,8 +28,6 @@ describe("CalculadoraComponent", () => {
 
   describe("Test for multiply", () => {
     it("should return nine", () => {
-      //Arrage - Preparar
-      let calculator = new CalculadoraComponent();
       // Act - Actuar
       let result = calculator.multiply(3, 3);
       // Assert - Verificar
@@ -33,8 +35,6 @@ describe("CalculadoraComponent", () => {
     });
 
     it("should return four", () => {
-      //Arrage - Preparar
-      let calculator = new CalculadoraComponent();
       // Act - Actuar
       let result = calculator.multiply(1, 4);
       // Assert - Verificar
@@ -44,8 +44,6 @@ describe("CalculadoraComponent", () => {
 
   describe("Test for divide", () => {
     it("should return one", () => {
-      //Arrage - Preparar
-      let calculator = new CalculadoraComponent();
       // Act - Actuar y Assert - Verificar
       expect(calculator.divide(3, 3)).toEqual(1);
       expect(calculator.divide(9, 9)).toEqual(1);
@@ -53,8 +51,6 @@ describe("CalculadoraComponent", () => {
     });
 
     it("should return null", () => {
-      //Arrage - Preparar
-      let calculator = new CalculadoraComponent();
       // Act - Actuar y Assert - Verificar
       expect(calculator.divide(8, 0)).toBeNull();
       expect(calculator.divide(4, 0)).toBeNull();
