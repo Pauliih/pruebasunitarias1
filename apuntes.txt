@@ -1,0 +1,8 @@
+Correr pruebas
+
+npm test
+ng test
+ng test --single-run
+ng test --code-coverage
+ng test --single-run --code-coverage
+http-server coverage
