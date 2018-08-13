@@ -42,7 +42,7 @@ describe("CalculadoraComponent", () => {
     });
   });
 
-  describe("Test for divide", () => {
+  fdescribe("Test for divide", () => {
     it("should return one", () => {
       // Act - Actuar y Assert - Verificar
       expect(calculator.divide(3, 3)).toEqual(1);
@@ -50,7 +50,7 @@ describe("CalculadoraComponent", () => {
       expect(calculator.divide(80, 80)).toEqual(1);
     });
 
-    it("should return null", () => {
+    fit("should return null", () => {
       // Act - Actuar y Assert - Verificar
       expect(calculator.divide(8, 0)).toBeNull();
       expect(calculator.divide(4, 0)).toBeNull();
